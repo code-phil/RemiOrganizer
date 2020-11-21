@@ -1,5 +1,6 @@
 package com.philpieper.remiorganizer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        setContentView(R.layout.activity_timetable);
+        Intent intent = new Intent(MainActivity.this, Timetable.class);
+        startActivity(intent);
+
 
         /*butLogin = findViewById(R.id.butLogin);
 

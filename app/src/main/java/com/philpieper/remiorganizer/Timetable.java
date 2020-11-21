@@ -13,6 +13,14 @@ import java.util.Date;
 
 public class Timetable extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
+    TextView tvDay;
+    TextView firstLine735;
+    TextView firstLine930;
+    TextView firstLine1105;
+    TextView firstLine1205;
+    TextView firstLine1305;
+    TextView firstLine1445;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +32,29 @@ public class Timetable extends AppCompatActivity implements AdapterView.OnItemCl
 
         setContentView(R.layout.activity_timetable);
 
-
-
-        TextView tvDay;
-        tvDay = (TextView) findViewById(R.id.tvDay);
+        //Day-Title
+        tvDay = findViewById(R.id.tvDay);
         setDay(tvDay);
 
+        //Timetable TextViews
+
+        firstLine735 = findViewById(R.id.tvFirstLine735);
+        firstLine930.setText(getDataFromDatabase(0));
+
+        firstLine930 = findViewById(R.id.firstLine930);
+        firstLine930.setText(getDataFromDatabase(1));
+
+        firstLine1105 = findViewById(R.id.firstLine1105);
+        firstLine1105.setText(getDataFromDatabase(2));
+
+        firstLine1205 = findViewById(R.id.firstLine1205);
+        firstLine1205.setText(getDataFromDatabase(3));
+
+        firstLine1305  = findViewById(R.id.firstLine1305);
+        firstLine1305.setText(getDataFromDatabase(4));
+
+        firstLine1445 = findViewById(R.id.firstLine1445);
+        firstLine1445.setText(getDataFromDatabase(5));
 
     }
 
@@ -62,5 +87,13 @@ public class Timetable extends AppCompatActivity implements AdapterView.OnItemCl
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+    }
+
+    public String getDataFromDatabase(int pStundenIndex){
+        String defaultReturn = "Default";
+
+        //SELECT FROM Fach, Raum WHERE id==pStundenIndex
+
+        return defaultReturn;
     }
 }
