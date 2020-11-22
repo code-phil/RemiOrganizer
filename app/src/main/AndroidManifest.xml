@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RemiOrganizer">
-        <activity android:name=".Timetable"></activity>
+        <activity android:name=".TimetableMontagActivity"></activity>
+        <activity android:name=".TimetableDienstagActivity"></activity>
+        <activity android:name=".TimetableMittwochActivity"></activity>
+        <activity android:name=".TimetableDonnerstagActivity"></activity>
+        <activity android:name=".TimetableFreitagActivity"></activity>
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.RemiOrganizer.NoActionBar" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".Dashbord"
+            android:name=".DashbordActivity"
             android:label="@string/title_activity_dashbord"
             android:theme="@style/Theme.RemiOrganizer.NoActionBar" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".Loading">
+        <activity android:name=".LoadingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

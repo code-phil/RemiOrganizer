@@ -2,6 +2,7 @@ package com.philpieper.remiorganizer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -21,11 +22,10 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        Intent intent = new Intent(MainActivity.this, Timetable.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_main);
 
 
-        /*butLogin = findViewById(R.id.butLogin);
+        butLogin = findViewById(R.id.butLogin);
 
         butLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });*/
+        });
 
     }
 }

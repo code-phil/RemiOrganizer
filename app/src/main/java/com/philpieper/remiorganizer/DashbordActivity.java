@@ -13,17 +13,20 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.philpieper.remiorganizer.databinding.ActivityDashbordBinding;
 
-public class Dashbord extends AppCompatActivity {
+import java.util.Date;
+
+public class DashbordActivity extends AppCompatActivity {
 
     private ActivityDashbordBinding binding;
 
-
+    ImageView ivStundenplan;
+    int day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ImageView ivStundenplan;
+
 
         //Digusting Android Zeug entfernen
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -36,18 +39,51 @@ public class Dashbord extends AppCompatActivity {
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle(getTitle());
+        toolBarLayout.setTitle("Dashboard");
+
+        //getDay
+        day = new Date().getDay();
 
         ivStundenplan = findViewById(R.id.ivStundenplan);
 
         ivStundenplan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Dashbord.this, Timetable.class);
-                startActivity(intent);
+
+                goToTimetableDay(day);
+
             }
         });
 
 
     }
+    public void goToTimetableDay(int pDay){
+        switch(pDay){
+            case 2:
+                Intent intent1 = new Intent(DashbordActivity.this, TimetableDienstagActivity.class);
+                startActivity(intent1);
+                break;
+
+            case 3:
+                Intent intent2 = new Intent(DashbordActivity.this, TimetableMittwochActivity.class);
+                startActivity(intent2);
+                break;
+
+            case 4:
+                Intent intent3 = new Intent(DashbordActivity.this, TimetableDonnerstagActivity.class);
+                startActivity(intent3);
+                break;
+
+            case 5:
+                Intent intent4 = new Intent(DashbordActivity.this, TimetableFreitagActivity.class);
+                startActivity(intent4);
+                break;
+
+            default:
+                Intent intent5 = new Intent(DashbordActivity.this, TimetableMontagActivity.class);
+                startActivity(intent5);
+                break;
+        }
+    }
+
 }

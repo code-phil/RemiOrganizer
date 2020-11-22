@@ -1,17 +1,16 @@
 package com.philpieper.remiorganizer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Date;
-
-public class Timetable extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class TimetableMittwochActivity extends AppCompatActivity{
 
     TextView tvDay;
     TextView firstLine735;
@@ -20,6 +19,9 @@ public class Timetable extends AppCompatActivity implements AdapterView.OnItemCl
     TextView firstLine1205;
     TextView firstLine1305;
     TextView firstLine1445;
+
+    ImageView ivBackToDashboard;
+    ImageView ivToDonnerstag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +32,32 @@ public class Timetable extends AppCompatActivity implements AdapterView.OnItemCl
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        setContentView(R.layout.activity_timetable);
+        setContentView(R.layout.activity_mittwoch_timetable);
 
-        //Day-Title
-        tvDay = findViewById(R.id.tvDay);
-        setDay(tvDay);
+        //Back Button
+        ivBackToDashboard = findViewById(R.id.ivBackToDashboard);
+
+        ivBackToDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        //Weiter Button
+        ivToDonnerstag = findViewById(R.id.ivToDonnerstag);
+        ivToDonnerstag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TimetableMittwochActivity.this, TimetableDonnerstagActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //Timetable TextViews
 
         firstLine735 = findViewById(R.id.tvFirstLine735);
-        firstLine930.setText(getDataFromDatabase(0));
+        firstLine735.setText(getDataFromDatabase(0));
 
         firstLine930 = findViewById(R.id.firstLine930);
         firstLine930.setText(getDataFromDatabase(1));
@@ -55,37 +73,6 @@ public class Timetable extends AppCompatActivity implements AdapterView.OnItemCl
 
         firstLine1445 = findViewById(R.id.firstLine1445);
         firstLine1445.setText(getDataFromDatabase(5));
-
-    }
-
-    public void setDay(TextView tvDay){
-        int date = new Date().getDay();
-        String day = "";
-
-        switch(date){
-            case 2:
-                day = "Dienstag";
-                break;
-            case 3:
-                day = "Mittwoch";
-                break;
-            case 4:
-                day = "Donnerstag";
-                break;
-            case 5:
-                day = "Freitag";
-                break;
-            default:
-                day = "Montag";
-                break;
-        }
-
-        tvDay.setText(day);
-    }
-
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
     }
 

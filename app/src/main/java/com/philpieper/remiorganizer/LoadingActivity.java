@@ -8,7 +8,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Loading extends AppCompatActivity {
+public class LoadingActivity extends AppCompatActivity {
 
     final String prefNameIsLoggedIn = "isLoggedIn";
     final String prefNameAdminAccountEmail = "adminAccountEmail";
@@ -27,7 +27,7 @@ public class Loading extends AppCompatActivity {
 
         createAdminAccount();
 
-        Intent intent = new Intent(Loading.this, MainActivity.class);
+        Intent intent = new Intent(LoadingActivity.this, MainActivity.class);
         startActivity(intent);
 
 

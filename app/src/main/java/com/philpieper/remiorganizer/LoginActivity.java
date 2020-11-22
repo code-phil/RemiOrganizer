@@ -1,7 +1,5 @@
 package com.philpieper.remiorganizer;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +10,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,6 +35,9 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         setContentView(R.layout.activity_login);
+
+        Intent intent = new Intent(LoginActivity.this, DashbordActivity.class);
+        startActivity(intent);
 
         //Edit Texts
         etEmail = findViewById(R.id.etEmail);
@@ -69,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString(prefNameUserEmail, "admin");
                         editor.commit();
 
-                        Intent intent = new Intent(LoginActivity.this, Dashbord.class);
+                        Intent intent = new Intent(LoginActivity.this, DashbordActivity.class);
                         startActivity(intent);
                     }}
                 }}

@@ -4,30 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Timetable">
+    tools:context=".TimetableMontagActivity">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="522dp"
         android:layout_height="365dp"
-        android:layout_marginBottom="540dp"
+        android:layout_marginBottom="532dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/timetablerechteck" />
 
+    <ImageView
+        android:id="@+id/ivBackToDashboard"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/ivToMontag"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:rotationY="180"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/arrow" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="398dp"
-        android:layout_height="609dp"
+        android:layout_width="391dp"
+        android:layout_height="601dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="500dip"
+            android:layout_marginTop="20dp"
             android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -192,8 +222,6 @@
             <!-- 1. Zeile -->
 
 
-
-
             <TextView
                 android:id="@+id/tvFirstLine735"
                 android:layout_width="fill_parent"
@@ -201,12 +229,12 @@
                 android:layout_alignWithParentIfMissing="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:text=""
-                android:gravity="center_vertical"
-                android:textAlignment="center"
-                android:textSize="25sp"
                 android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Mathe C22"
+                android:textAlignment="center"
                 android:textColor="@color/white"
+                android:textSize="25sp"
                 tools:ignore="RtlCompat" />
 
             <!-- 2. Zeile -->
@@ -215,16 +243,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="64dp"
                 android:layout_alignWithParentIfMissing="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/tvFirstLine735"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="70dp"
-                android:text="Deutsch C26"
-                android:textSize="25sp"
                 android:fontFamily="@font/bold"
-                android:textColor="@color/white"
                 android:gravity="center_vertical"
+                android:text="Deutsch C26"
                 android:textAlignment="center"
-                tools:ignore="RtlCompat"/>
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
 
             <!-- 3. Zeile -->
             <TextView
@@ -232,16 +260,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="64dp"
                 android:layout_alignWithParentIfMissing="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/firstLine930"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="70dp"
-                android:text="Erdkunde K15"
-                android:textSize="25sp"
                 android:fontFamily="@font/bold"
-                android:textColor="@color/white"
                 android:gravity="center_vertical"
+                android:text="Erdkunde K15"
                 android:textAlignment="center"
-                tools:ignore="RtlCompat"/>
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
 
             <!-- 4. Zeile -->
             <TextView
@@ -249,16 +277,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="64dp"
                 android:layout_alignWithParentIfMissing="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/firstLine1105"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="70dp"
-                android:text="Englisch K18"
-                android:textSize="25sp"
                 android:fontFamily="@font/bold"
-                android:textColor="@color/white"
                 android:gravity="center_vertical"
+                android:text="Englisch K18"
                 android:textAlignment="center"
-                tools:ignore="RtlCompat"/>
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
 
             <!-- 5. Zeile -->
             <TextView
@@ -266,16 +294,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="64dp"
                 android:layout_alignWithParentIfMissing="true"
-                android:layout_alignParentRight="true"
-                android:text="Informatik A26"
                 android:layout_alignTop="@id/firstLine1205"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="70dp"
-                android:textSize="25sp"
                 android:fontFamily="@font/bold"
-                android:textColor="@color/white"
                 android:gravity="center_vertical"
+                android:text="Informatik A26"
                 android:textAlignment="center"
-                tools:ignore="RtlCompat"/>
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
 
             <!-- 6. Zeile -->
             <TextView
@@ -283,16 +311,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="64dp"
                 android:layout_alignWithParentIfMissing="true"
-                android:layout_alignParentRight="true"
-                android:text="Sport TT"
                 android:layout_alignTop="@id/firstLine1305"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="70dp"
-                android:textSize="25sp"
                 android:fontFamily="@font/bold"
-                android:textColor="@color/white"
                 android:gravity="center_vertical"
+                android:text="Sport TT"
                 android:textAlignment="center"
-                tools:ignore="RtlCompat"/>
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayoutLineOne"
@@ -452,8 +480,8 @@
         android:id="@+id/ivStundenplanTitle"
         android:layout_width="375dp"
         android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="36dp"
         android:layout_marginBottom="50dp"
         android:fontFamily="@font/medium"
@@ -471,9 +499,10 @@
         android:id="@+id/tvDay"
         android:layout_width="339dp"
         android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:fontFamily="@font/bold"
+        android:text="Freitag"
         android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"

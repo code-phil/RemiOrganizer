@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimetableMontagActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="522dp"
+        android:layout_height="365dp"
+        android:layout_marginBottom="528dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/timetablerechteck" />
+
+    <ImageView
+        android:id="@+id/ivBackToDashboard"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/ivToDienstag"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:rotationY="180"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/arrow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="391dp"
+        android:layout_height="601dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="500dip"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 1. Zeile -->
+                <ImageView
+                    android:id="@+id/iv735"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/timetablerechteckfuertext" />
+
+                <ImageView
+                    android:id="@+id/ivZeit735"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="2dp"
+                    app:srcCompat="@drawable/timetablezeitrechteck" />
+
+                <ImageView
+                    android:id="@+id/ivOutline735"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/timetablerechteckfuertextoutline" />
+
+                <!-- 2. Zeile -->
+                <ImageView
+                    android:id="@+id/iv930"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv735"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertext" />
+
+                <ImageView
+                    android:id="@+id/ivZeit930"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivZeit735"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablezeitrechteck" />
+
+                <ImageView
+                    android:id="@+id/ivOutline930"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv735"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertextoutline" />
+
+                <!-- 3. Zeile -->
+                <ImageView
+                    android:id="@+id/iv1105"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv930"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertext" />
+
+                <ImageView
+                    android:id="@+id/ivZeit1105"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivZeit930"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablezeitrechteck" />
+
+                <ImageView
+                    android:id="@+id/ivOutline1105"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv930"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertextoutline" />
+
+                <!-- 4. Zeile -->
+                <ImageView
+                    android:id="@+id/iv1205"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv1105"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertext" />
+
+                <ImageView
+                    android:id="@+id/ivZeit1205"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivZeit1105"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablezeitrechteck" />
+
+                <ImageView
+                    android:id="@+id/ivOutline1205"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv1105"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertextoutline" />
+
+                <!-- 5. Zeile -->
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv1305"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv1205"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertext" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/ivZeit1305"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivZeit1205"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablezeitrechteck" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/ivOutline1305"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv1205"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertextoutline" />
+
+                <!-- 6. Zeile -->
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv1445"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv1305"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertext" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/ivZeit1445"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivZeit1305"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablezeitrechteck" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/ivOutline1445"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv1305"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/timetablerechteckfuertextoutline" />
+
+            </RelativeLayout>
+
+            <!-- texte -->
+            <!-- 1. Zeile -->
+
+
+            <TextView
+                android:id="@+id/tvFirstLine735"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Mathe C22"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
+
+            <!-- 2. Zeile -->
+            <TextView
+                android:id="@+id/firstLine930"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_alignTop="@id/tvFirstLine735"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Deutsch C26"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
+
+            <!-- 3. Zeile -->
+            <TextView
+                android:id="@+id/firstLine1105"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_alignTop="@id/firstLine930"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Erdkunde K15"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
+
+            <!-- 4. Zeile -->
+            <TextView
+                android:id="@+id/firstLine1205"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_alignTop="@id/firstLine1105"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Englisch K18"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
+
+            <!-- 5. Zeile -->
+            <TextView
+                android:id="@+id/firstLine1305"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_alignTop="@id/firstLine1205"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Informatik A26"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
+
+            <!-- 6. Zeile -->
+            <TextView
+                android:id="@+id/firstLine1445"
+                android:layout_width="fill_parent"
+                android:layout_height="64dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_alignTop="@id/firstLine1305"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Sport TT"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="RtlCompat" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLineOne"
+                android:layout_width="61dp"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/time735"
+                    android:layout_width="61dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:text="7.35"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLineTwo"
+                android:layout_width="61dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/constraintLayoutLineOne"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:id="@+id/time930"
+                    android:layout_width="61dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:text="9.30"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutLineThree"
+                android:layout_width="61dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/constraintLayoutLineTwo"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:id="@+id/time1105"
+                    android:layout_width="61dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:text="11.05"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/constraintLayoutLineFour"
+                android:layout_width="61dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/constraintLayoutLineThree"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:id="@+id/time1205"
+                    android:layout_width="61dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:text="12.05"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/constraintLayoutLineFive"
+                android:layout_width="61dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/constraintLayoutLineFour"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/time1305"
+                    android:layout_width="61dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:text="13.05"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/constraintLayoutLineSix"
+                android:layout_width="61dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/constraintLayoutLineFive"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/time1445"
+                    android:layout_width="61dp"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center_vertical"
+                    android:text="14.45"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/ivStundenplanTitle"
+        android:layout_width="375dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/medium"
+        android:text="Stundenplan"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="339dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/bold"
+        android:text="Montag"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
